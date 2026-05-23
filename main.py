@@ -44,22 +44,23 @@ while True:
 while True:
     response = input("Sige nga, sino may birthday ngayon? ").strip().lower()
 
-    if response == 'momo':
+    # safer check (accepts momo, momo with spaces, etc.)
+    if "momo" in response:
+
         print("YAY! IT'S MOMORING DAY")
         time.sleep(1)
 
-        # HAPPY BIRTHDAY SONG
-        print("Happy birthday Momo")
-        time.sleep(1.5)
+        # 🎵 SONG (REPLACED & GUARANTEED SHOW)
+        song = [
+            "Happy birthday Momo",
+            "Happy birthday Momo",
+            "Happy birthday, uri Momoring!",
+            "Happy birthday Momo!"
+        ]
 
-        print("Happy birthday Momo")
-        time.sleep(1.5)
-
-        print("Happy birthday, uri Momoring!")
-        time.sleep(2)
-
-        print("Happy birthday Momo!")
-        time.sleep(1.5)
+        for line in song:
+            print(line)
+            time.sleep(1.5)
 
         break
 
@@ -75,12 +76,12 @@ while True:
 
     if response == 'yes':
         print("Galing ah, lodi na kita ><")
-        time.sleep(1)
+        time.sleep(2)
         break
 
     elif response == 'no':
         print("It's either baby once ka pa o ang pangit mo kabonding :<")
-        time.sleep(1)
+        time.sleep(2)
         break
 
     else:
